@@ -1,10 +1,4 @@
-"""
-USE A STACK TO CHECK WHETHER OR NOT A STRING HAS BALANCED USAGE OF PAREN
 
-(), ()() , {()} , ({((([])))}) ---> BALANCED
- (]}}}(, }){)} ---> NOT BALANED
-
-"""
 
 from stack import Stack
 
@@ -17,7 +11,7 @@ def is_match(p1, p2):
 
             elif p1 == "[" and p2 == "]":
                 retun True
-                
+
                 else:
                     False
 
@@ -38,7 +32,12 @@ def is_paren_balanced (paren_string):
             if not is_match(top, paren)
             is_balanced = false
     index += 1
-    if s.empty() and is_balanced:
+    if s.is_empty() and is_balanced:
         return True
     else:
         retun False
+
+
+
+
+        print(is_paren_balanced("()"))
